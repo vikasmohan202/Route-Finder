@@ -29,3 +29,7 @@ This Flutter application allows users to enter their current location and a dest
    ```bash
    git clone https://github.com/yourusername/route_finder.git
    cd route_finder
+   flutter pub get
+   flutter run
+
+
