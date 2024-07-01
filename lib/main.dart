@@ -6,6 +6,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:route_finder/map.dart';
+// ignore: depend_on_referenced_packages
 import 'package:uuid/uuid.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:drop_down_search_field/drop_down_search_field.dart';
@@ -30,12 +31,8 @@ class _RouteFinderHomeState extends State<RouteFinderHome> {
   // final Location _locationService = Location();
   TextEditingController _startController = TextEditingController();
   TextEditingController _destinationController = TextEditingController();
-  SuggestionsBoxController _startSuggestionsBoxController =
-      SuggestionsBoxController();
-  SuggestionsBoxController _destinationSuggestionsBoxController =
-      SuggestionsBoxController();
-  Set<Polyline> _polylines = {};
-  String _sessionToken = Uuid().v4();
+  final Set<Polyline> _polylines = {};
+  final String _sessionToken = Uuid().v4();
   List<dynamic> _startSuggestions = [];
   List<dynamic> _destinationSuggestions = [];
   bool isLoading = false;
@@ -69,9 +66,6 @@ class _RouteFinderHomeState extends State<RouteFinderHome> {
       }
 
       // Get current position
-      Position position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high,
-      );
     } on PlatformException catch (e) {
       // Handle platform-specific errors
       debugPrint("PlatformException while getting location: $e");
