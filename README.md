@@ -14,3 +14,7 @@ This Flutter application allows users to enter their start location and a destin
    ```bash
    git clone https://github.com/vikasmohan202/Route-Finder.git
    cd route_finder
+   flutter pub get
+   flutter run
+
+
