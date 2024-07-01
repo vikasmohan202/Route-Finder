@@ -128,9 +128,10 @@ class _RouteFinderHomeState extends State<RouteFinderHome> {
             polylines: _polylines,
           ),
         ),
-      );
-      setState(() {
-        isLoading = false;
+      ).then((value) {
+        setState(() {
+          isLoading = false;
+        });
       });
     } else {
       setState(() {
