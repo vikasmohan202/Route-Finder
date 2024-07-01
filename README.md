@@ -17,5 +17,7 @@ This Flutter application allows users to enter their current location and a dest
    cd route_finder
    flutter pub get
    flutter run
+   in current location field enter the location it will give suggestions tab on the suggestions
+   and do same for the destination and enter find root it will redirect to map screen and map will    open
 
 
